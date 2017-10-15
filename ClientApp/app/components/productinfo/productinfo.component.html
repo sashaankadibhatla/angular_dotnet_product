@@ -1,0 +1,26 @@
+<h1>Product Group</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!infoproduct"><em>Loading...</em></p>
+
+<table class='table' *ngIf="infoproduct">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Group Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of infoproduct">
+            <td>{{ data.id }}</td>
+            <td>{{ data.group_Id }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.description }}</td>
+            <td>{{ data.rate }}</td>
+        </tr>
+    </tbody>
+</table>
